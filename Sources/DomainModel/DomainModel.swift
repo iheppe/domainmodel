@@ -140,7 +140,7 @@ public class Person {
         self.age = age
     }
     
-    func toString() -> String {
+    public func toString() -> String {
         var result = "[Person: firstName:" + firstName + " lastName:" + lastName + " age:" + String(age) + " job:"
         if job != nil {
             result += job!.title
@@ -174,7 +174,7 @@ public class Family {
         }
     }
     
-    func haveChild(_ child: Person) -> Bool {
+    public func haveChild(_ child: Person) -> Bool {
         if members[0].age < 21 && members[1].age < 21 {
             return false
         } else {
@@ -183,7 +183,7 @@ public class Family {
         }
     }
     
-    func householdIncome() -> Int {
+    public func householdIncome() -> Int {
         var result = 0
         for member in members {
             if member.job != nil {
